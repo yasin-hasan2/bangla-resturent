@@ -8,10 +8,10 @@ import useMenu from '../../hooks/useMenu';
 const PopularMenu = () => {
     const [menu] = useMenu();
     const popular = menu.filter(item => item.category === 'popular');
-    const soup = menu.filter(item => item.category === 'soup');
-    const salad = menu.filter(item => item.category === 'salad');
-    const pizza = menu.filter(item => item.category === 'pizza');
-    const offered = menu.filter(item => item.category === 'offered');
+    // const soup = menu.filter(item => item.category === 'soup');
+    // const salad = menu.filter(item => item.category === 'salad');
+    // const pizza = menu.filter(item => item.category === 'pizza');
+    // const offered = menu.filter(item => item.category === 'offered');
     // const [menu, setMenu] = useState([]);
     // console.log(menu)
     //  useEffect( () =>{
