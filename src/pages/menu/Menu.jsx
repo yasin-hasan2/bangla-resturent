@@ -5,6 +5,10 @@ import menuImg from '../../assets/img/menu/banner3.jpg'
 import useMenu from '../../hooks/useMenu';
 import SectionTitle from '../../components/sectionTitle/SectionTitle';
 import MenuCategory from '../shared/menuCategory/MenuCategory';
+import dessertImg from '../../assets/img/menu/dessert-bg.jpeg'
+import soupImg from '../../assets/img/menu/soup-bg.jpg'
+import saladImg from '../../assets/img/menu/salad-bg.jpg'
+import pizzaImg from '../../assets/img/menu/pizza-bg.jpg'
 
 const Menu = () => {
     const [menu] = useMenu();
@@ -31,7 +35,10 @@ const Menu = () => {
            </SectionTitle>
            <div>
            <MenuCategory items={offered}></MenuCategory>
-           <MenuCategory items={dessert} title={"Dessert"} ></MenuCategory>
+           <MenuCategory items={dessert} title={"Dessert"} img={dessertImg} ></MenuCategory>
+           <MenuCategory items={pizza} title={"pizza"} img={pizzaImg} ></MenuCategory>
+           <MenuCategory items={salad} title={"salad"} img={saladImg} ></MenuCategory>
+           <MenuCategory items={soup} title={"soup"} img={soupImg} ></MenuCategory>
 
            </div>
            </div>
