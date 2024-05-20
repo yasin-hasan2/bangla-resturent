@@ -3,6 +3,8 @@ import { useContext, useEffect, useRef, useState } from 'react';
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 import { AuthContext } from '../../providers/AuthProvider';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import Swal from 'sweetalert2';
 
 const Login = () => {
   const captchaRef = useRef(null)
@@ -26,6 +28,23 @@ const Login = () => {
         .then(result => {
           const user = result.user;
           console.log(user); 
+          Swal.fire({
+            title: "user login successful",
+            showClass: {
+              popup: `
+                animate__animated
+                animate__fadeInUp
+                animate__faster
+              `
+            },
+            hideClass: {
+              popup: `
+                animate__animated
+                animate__fadeOutDown
+                animate__faster
+              `
+            }
+          });
         })
     }
 
@@ -44,6 +63,13 @@ const Login = () => {
 
     return (
         <div>
+        <div>
+          <Helmet>
+          <title>
+          Bangla-restaurant || LogIn
+          </title>
+          </Helmet>
+          </div>
         <div className="hero min-h-screen bg-base-200">
         <div className="hero-content  flex-col md:flex-row-reverse">
           <div className="text-center lg:text-left">

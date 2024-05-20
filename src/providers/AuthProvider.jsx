@@ -21,7 +21,7 @@ const AuthProvider = ({children}) => {
 // ====================  User Sign in
     const signIn = (email, password) => {
         setLoading(true);
-        return signInWithEmailAndPassword(email, password);
+        return signInWithEmailAndPassword(auth, email, password);
     }
 
 // ====================  User Log Out
@@ -49,7 +49,7 @@ useEffect(() => {
         loading,
         createUser,
         signIn,
-        signOut
+        logOut
     }
 
     return (
