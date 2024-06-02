@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
+import { IoCartSharp } from "react-icons/io5";
 
 const Navbar = () => {
 
@@ -19,12 +20,18 @@ const Navbar = () => {
     <li> <Link to="/menu" >Our Menu</Link> </li>
     <li> <Link to="/order/salad" >Food Order </Link> </li>
     <li> <Link to="secret" >secret </Link> </li>
+    <li> <Link to="/" > 
+    <button className="btn">
+    <IoCartSharp></IoCartSharp> 
+  <div className="badge badge-secondary">+0</div>
+</button>
+    </Link> </li>
    <li>
    {
     user ? 
     
     <div>
-    <span>{user?.displayName}</span>
+    {/*<span>{user?.displayName}</span>*/}
     <button onClick={handleLogOut}  >logOut</button>
     </div>
     :
