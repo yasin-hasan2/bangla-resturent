@@ -22,7 +22,7 @@ const Navbar = () => {
     <li> <Link to="/menu" >Our Menu</Link> </li>
     <li> <Link to="/order/salad" >Food Order </Link> </li>
     <li> <Link to="secret" >secret </Link> </li>
-    <li> <Link to="/" > 
+    <li> <Link to="/dashboard/cart" > 
     <button className="btn">
     <IoCartSharp></IoCartSharp> 
   <div className="badge badge-secondary">+{cart.length}</div>
