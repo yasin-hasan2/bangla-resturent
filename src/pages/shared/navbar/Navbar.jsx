@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { IoCartSharp } from "react-icons/io5";
+import useCart from '../../../hooks/useCart';
 
 const Navbar = () => {
 
-  const {user, logOut} = useContext(AuthContext)
+  const {user, logOut} = useContext(AuthContext);
+  const [cart] = useCart();
   // console.log(user)
   // console.log(logOut)
   const handleLogOut = () => {
@@ -23,7 +25,7 @@ const Navbar = () => {
     <li> <Link to="/" > 
     <button className="btn">
     <IoCartSharp></IoCartSharp> 
-  <div className="badge badge-secondary">+0</div>
+  <div className="badge badge-secondary">+{cart.length}</div>
 </button>
     </Link> </li>
    <li>
@@ -61,7 +63,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="btn">{user?.email}</a>
         </div>
       </div>
         </div>
