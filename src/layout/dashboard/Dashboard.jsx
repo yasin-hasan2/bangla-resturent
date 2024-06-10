@@ -1,19 +1,56 @@
 import React from 'react';
-import { FaAd, FaCalendar, FaEnvelope, FaHome, FaList, FaSearch, FaShoppingCart, FaVoicemail } from 'react-icons/fa';
+import { FaAd, FaBook, FaCalendar, FaEnvelope, FaHome, FaList, FaSearch, FaShoppingCart, FaUser, FaUtensils, FaVoicemail } from 'react-icons/fa';
 import { NavLink, Outlet } from 'react-router-dom';
 import useCart from '../../hooks/useCart';
 
 const Dashboard = () => {
   const [cart] = useCart();
+
   // TODO : get isAdmin value from the database
   const isAdmin = true;
+
     return (
         <div className='flex'>
     
 
             <div className='w-64 min-h-full bg-orange-400'>
             <ul className="menu">
+             {
+              isAdmin ? <>
+              <li>
+              <NavLink to="/dashboard/adminHome" >
+               <FaHome></FaHome>
+                Admin Home
+              </NavLink>
+            </li>
              <li>
+              <NavLink to="/dashboard/addItems" >
+               <FaUtensils ></FaUtensils>
+                Add Items
+              </NavLink>
+            </li>
+             <li>
+              <NavLink to="/dashboard/manageItems" >
+               <FaList></FaList>
+                Manage Items
+              </NavLink>
+            </li>
+             <li>
+              <NavLink to="/dashboard/bookings" >
+               <FaBook></FaBook>
+                Manage Bookings
+              </NavLink>
+            </li>
+             <li>
+              <NavLink to="/dashboard/users" >
+               <FaUser></FaUser>
+                All Users
+              </NavLink>
+            </li>
+              </>
+              :
+              <>
+              <li>
               <NavLink to="/dashboard/userHome" >
                <FaHome></FaHome>
                 User Home
@@ -43,6 +80,8 @@ const Dashboard = () => {
                 Booking
               </NavLink>
             </li>
+              </>
+             }
             {/* shard nav links */}
             <div className='divider'></div>
             <li>
