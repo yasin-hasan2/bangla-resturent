@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 
 const Testimonials = () => {
     const [reviews, setReviews] = useState([]);
-  console.log(reviews)
+//   console.log(reviews)
     useEffect(() => {
         fetch('reviews.json')
         .then(res => res.json())
