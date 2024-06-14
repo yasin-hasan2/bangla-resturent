@@ -43,6 +43,7 @@ const Cart = () => {
    
     return (
         <div>
+        
             <div className='flex justify-evenly mb-4'>
             <h2 className='text-4xl'>Items: {cart.length} </h2>
             <h2 className='text-4xl'>Total Price: {totalPrice} </h2>
