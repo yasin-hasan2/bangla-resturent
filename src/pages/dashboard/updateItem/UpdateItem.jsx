@@ -44,6 +44,7 @@ const UpdateItem = () => {
             console.log(menuRes.data)
             if(menuRes.data.modifiedCount > 0){
                 // show success popup
+                
                 reset();
                 Swal.fire({
                     position: "top-end",
