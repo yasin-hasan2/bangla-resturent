@@ -1,6 +1,12 @@
 // import React from 'react';
 
+import { loadStripe } from "@stripe/stripe-js";
 import SectionTitle from "../../../components/sectionTitle/SectionTitle";
+
+
+
+// const stripePromise = loadStripe('');
+
 
 const Payment = () => {
     return (
