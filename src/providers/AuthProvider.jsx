@@ -73,8 +73,8 @@ useEffect(() => {
             // do something
             //TODO : remove token (id token stored in the client side : local storage , caching, in memory)
             localStorage.removeItem('access-token');
+            setLoading(false);
         }
-        setLoading(false);
     });
     return () => {
         return unsubscribe();
