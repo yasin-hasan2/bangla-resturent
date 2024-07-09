@@ -3,6 +3,7 @@ import SectionTitle from '../../components/sectionTitle/SectionTitle';
 // import { data } from 'autoprefixer';
 import MenuItem from '../shared/menuitem/MenuItem';
 import useMenu from '../../hooks/useMenu';
+import { Link } from 'react-router-dom';
 
 
 const PopularMenu = () => {
@@ -30,17 +31,24 @@ const PopularMenu = () => {
     //  },[])
     return (
         <div>
-            <section className='mb-12' >
+            <section className='mb-12 ' >
             <SectionTitle
             heading={"From Our Menu"}
             subHeading={"popular items"}
             ></SectionTitle>
             </section>
-            <div className='grid grid-cols-2 gap-10' >
+            <div className='grid grid-cols-2 gap-10   w-4/5 mx-auto' >
            {popular.map(item => <MenuItem
             key={item._id}
             item={item}
             ></MenuItem>)}
+            </div>
+            <div>
+            <Link to="/menu" >
+            <button className=' w-60 mx-auto text-black flex justify-center mt-12 btn btn-outline'>
+            View Full Menu
+            </button>
+            </Link>
             </div>
 
         </div>

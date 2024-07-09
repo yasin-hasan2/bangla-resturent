@@ -20,6 +20,7 @@ import Payment from "../pages/dashboard/payment/Payment";
 import PaymentHistory from "../pages/dashboard/paymentHistory/PaymentHistory";
 import UserHome from "../pages/dashboard/userHome/UserHome";
 import AdminHome from "../pages/dashboard/adminHome/AdminHome";
+import ContactUs from "../pages/contactUs/ContactUs";
 
   export const router = createBrowserRouter([
     {
@@ -45,6 +46,10 @@ import AdminHome from "../pages/dashboard/adminHome/AdminHome";
         {
           path: "/signUp",
           element: <SignUp></SignUp>
+        },
+        {
+          path: "/contact",
+          element: <ContactUs></ContactUs>
         },
         {
           path: "secret",

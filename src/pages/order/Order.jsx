@@ -36,7 +36,7 @@ const Order = () => {
         </div>
 
         <div>
-        <Cover img={orderCover} title={"Order food"} ></Cover>
+        <Cover img={orderCover} title={"Order food"} ideas={'Would you like to try a dish?'} ></Cover>
         </div>
         <Tabs defaultIndex={tabIndex} onSelect={(index) => SetTabIndex(index)}>
   <TabList>

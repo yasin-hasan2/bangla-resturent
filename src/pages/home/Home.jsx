@@ -1,6 +1,7 @@
 // import React from 'react';
 
 
+import CallUs from "../shared/callUs/CallUs";
 import Featured from "../featured/Featured";
 import PopularMenu from "../popularMenu/PopularMenu";
 import Banner from "./banner/Banner";
@@ -12,7 +13,7 @@ import { Helmet} from 'react-helmet-async';
 
 const Home = () => {
     return (
-        <div>
+        <div  > 
         <Helmet>
         <title>
         Bangla-restaurant || Home
@@ -21,6 +22,7 @@ const Home = () => {
             <Banner></Banner>
             <Category></Category>
             <PopularMenu></PopularMenu>
+            <CallUs></CallUs>
             <Featured></Featured>
             <Testimonials></Testimonials>
         </div>

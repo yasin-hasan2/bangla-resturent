@@ -28,12 +28,12 @@ const Menu = () => {
           </div>
           
            <div>
-           <Cover img={menuImg} title={"our menu"} ></Cover>
+           <Cover img={menuImg} title={"our menu"} ideas={'Would you like to try a dish?'}  ></Cover>
            <SectionTitle 
            subHeading={"Don't miss"} heading={"today's offers"}
            >
            </SectionTitle>
-           <div>
+           <div >
            <MenuCategory items={offered}></MenuCategory>
            <MenuCategory items={dessert} title={"Dessert"} img={dessertImg} ></MenuCategory>
            <MenuCategory items={pizza} title={"pizza"} img={pizzaImg} ></MenuCategory>

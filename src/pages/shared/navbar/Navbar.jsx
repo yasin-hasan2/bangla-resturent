@@ -25,38 +25,44 @@ const Navbar = () => {
 
 
     const navOption = <>
-    <li> <Link to="/" >Home</Link> </li>
-    <li> <Link to="/menu" >Contact Us</Link> </li>
+    <li> <Link to="/" className='hover:text-[#EEFF25] ' >Home</Link> </li>
+    <li> <Link to="/contact" className='hover:text-[#EEFF25] '  >Contact Us</Link> </li>
     {
       // user ? 'true' : 'false' <== ternary operator
       // user ? condition ? 'double true' : 'one true' : 'false' <== nested operator
     }
     {
-      user && isAdmin && <li> <Link to="/dashboard/adminHome" >Dashboard </Link> </li>
+      user && isAdmin && <li> <Link to="/dashboard/adminHome" className='hover:text-[#EEFF25] '  >Dashboard </Link> </li>
     }
     {
-      user && !isAdmin && <li> <Link to="/dashboard/userHome" >Dashboard </Link> </li>
+      user && !isAdmin && <li> <Link to="/dashboard/userHome" className='hover:text-[#EEFF25] '  >Dashboard </Link> </li>
     }
-    <li> <Link to="/menu" >Our Menu</Link> </li>
-    <li> <Link to="/order/salad" >Food Order </Link> </li>
-    <li> <Link to="/dashboard/cart" className=" " > 
+    <li> <Link to="/menu" className='hover:text-[#EEFF25] '  >Our Menu</Link> </li>
+    <li> <Link to="/order/salad" className='hover:text-[#EEFF25] '  >Our Shop</Link> </li>
+    <li> 
+    {
+      user ? <Link to="/dashboard/cart" className='hover:text-[#EEFF25] '  > 
     
-    Our Shop
-    <IoCartSharp></IoCartSharp> 
-  <div className="badge badge-secondary">+{cart.length}</div>
-
-    </Link> </li>
+    
+      <IoCartSharp></IoCartSharp> 
+    <div className="badge badge-secondary">+{cart.length}</div>
+  
+      </Link>
+      :
+      ''
+    }
+    </li>
    <li>
    {
     user ? 
     
     <div>
     {/*<span>{user?.displayName}</span>*/}
-    <button onClick={handleLogOut}  >logOut</button>
+    <button onClick={handleLogOut}  className='hover:text-[#EEFF25] ' >logOut</button>
     </div>
     :
     <div>
-    <li> <Link to="/login" > Login </Link> </li>
+    <li> <Link to="/login" className='hover:text-[#EEFF25] btn btn-outline text-yellow-400'  > Login </Link> </li>
     </div>
   }
    </li>
@@ -76,10 +82,13 @@ const Navbar = () => {
         {navOption}
       </ul>
           </div>
-          <Link to="/" className="btn btn-ghost text-xl uppercase">Bangla Restaura</Link>
+          <div className='flex flex-col items-center uppercase'>
+          <Link to="/" className="btn btn-ghost text-xl font-bold">Bistro Boss</Link>
+          <span >Restaurant</span>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 ">
+          <ul className="menu menu-horizontal px-1  ">
             {navOption}
           </ul>
         </div>
