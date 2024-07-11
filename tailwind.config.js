@@ -6,10 +6,10 @@ export default {
   ],
   theme: {
     extend: {
-    daisyui: {
-          themes: ["cupcake"],
-        },
-    },
+      backgroundImage: {
+        'logInCover': "url('/src/assets/img/others/authentication.png')",
+      }
+    }
   },
   plugins: [require("daisyui")],
 }

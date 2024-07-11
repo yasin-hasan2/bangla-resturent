@@ -1,0 +1,9 @@
+
+.background{
+    /* background-color: none; */
+    width: 648px;
+    background: none;
+}
+.background-remove {
+    mix-blend-mode: multiply;
+}

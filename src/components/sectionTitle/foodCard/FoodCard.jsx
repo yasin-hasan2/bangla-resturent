@@ -69,16 +69,16 @@ const FoodCard = ({item}) => {
     }
     return (
         <div>
-        <div className="card w-96 bg-base-100 shadow-xl">
-        <figure><img src= {image} alt="Shoes" /></figure>
-        <p className='absolute right-0 mr-4 mt-4 px-4 bg-slate-500' >$ {price} </p>
-        <div className="card-body">
+        <div className="card h-[450px] rounded-none ">
+        <figure><img src= {image} alt="Food Image" /></figure>
+        <p className='absolute right-0 mr-4 mt-4 px-4 bg-slate-500 text-white font-semibold' >$ {price} </p>
+        <div className="card-body bg-[#F3F3F3]">
           <h2 className="card-title"> {name} </h2>
-          <p> {recipe} </p>
+          <p className='text-sm'> {recipe} </p>
           <div className="card-actions justify-center">
             <button 
             onClick={ handleAddToCart}
-            className="btn btn-primary"> add to cart </button>
+            className="btn btn-outline text-[#BB8506] hover:text-white uppercase"> add to cart </button>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ const From = () => {
     return (
         <div className="p-7 ">
         <form className="card-body ">
-        <div className="flex w-full justify-between gap-4">
+        <div className="flex flex-col lg:flex-row w-full justify-between gap-4">
         <div className="form-control flex-1 ">
           <label className="label">
             <span className="label-text">Name*</span>

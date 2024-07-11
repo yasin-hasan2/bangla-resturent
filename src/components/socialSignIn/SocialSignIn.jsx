@@ -1,5 +1,5 @@
 // import React from 'react';
-import { FaGoogle, FaPlus } from 'react-icons/fa';
+import { FaGoogle } from 'react-icons/fa';
 import useAuth from '../../hooks/useAuth';
 import useAxiosPublic from '../../hooks/useAxiosPublic';
 import { useNavigate } from 'react-router-dom';
@@ -26,12 +26,9 @@ const SocialSignIn = () => {
     }
     return (
         <div>
-        <div className="divider"></div>
-            <div className="flex justify-center mb-2">
-            <button onClick={handleGoogleSignIn} className="btn btn-outline">
+            <div className="flex justify-center m-4">
+            <button onClick={handleGoogleSignIn} className="btn btn-outline text-black rounded-full">
             <FaGoogle></FaGoogle>
-            <FaPlus></FaPlus>
-            google
             </button>
             </div>
         </div>

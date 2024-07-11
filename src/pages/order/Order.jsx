@@ -39,8 +39,8 @@ const Order = () => {
         <Cover img={orderCover} title={"Order food"} ideas={'Would you like to try a dish?'} ></Cover>
         </div>
         <Tabs defaultIndex={tabIndex} onSelect={(index) => SetTabIndex(index)}>
-  <TabList>
-    <Tab>Salad</Tab>
+  <TabList className='flex justify-center items-center mx-auto w-4/5 h-20  text-center uppercase font-semibold py-4  m-4'>
+    <Tab >Salad</Tab>
     <Tab>Pizza</Tab>
     <Tab>Soup</Tab>
     <Tab>dessert</Tab>

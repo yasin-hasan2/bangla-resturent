@@ -120,7 +120,9 @@ const CheckoutForm = () => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
+            
             <CardElement
+            className=" h-12 pt-2 items-center text-[#A1A1A1] shadow-inner px-3"
         options={{
           style: {
             base: {
@@ -136,14 +138,16 @@ const CheckoutForm = () => {
           },
         }}
       />
+      <div className="w-full  flex justify-center">
       <button 
-      className="btn btn-sm btn-primary my-4" 
+      className=" w-52    btn btn-sm  h-10 text-white btn-primary my-4" 
       type="submit" 
       disabled={!stripe || !clientSecret}>
         Pay
       </button>
+      </div>
 
-      <p className="text-red-600" > {error} </p>
+      <p className="text-red-600 text-center font-medium" > {error} </p>
       {transactionId && <p className="text-green-600">Your transaction id : {transactionId}</p> }
             </form>
         </div>

@@ -11,7 +11,7 @@ const Featured = () => {
             <div className='md:flex justify-center py-20 pt-12 px-36' >
             <div>
             <img src={featuredImg} alt="" /></div>
-            <div className='md:ml-10'>
+            <div className='md:ml-10 '>
             <p>March 20, 2023
            </p>
            <p className='uppercase mb-3'> WHERE CAN I GET SOME?</p>

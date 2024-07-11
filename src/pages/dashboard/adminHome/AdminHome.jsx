@@ -66,11 +66,14 @@ console.log(chartData)
 
     return (
         <div>
-            <h2 className="text-3xl">
-            <span>Hi, welcome</span>
+            <h2 className="text-4xl font-semibold">
+            <span>Hi, welcome Back!</span>
+            <br />
+            <h3 className='text-[#D1A054] '>
             {
-                user?.displayName ? user.displayName : 'Back'
-            }
+              user?.displayName ? user.displayName : 'Back'
+          }
+            </h3>
             </h2>
             <div className="stats shadow">
   <div className="stat">

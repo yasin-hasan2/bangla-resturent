@@ -95,7 +95,12 @@ const Navbar = () => {
         {
         user ? <div className="navbar-end flex">
         <img src={user?.photoURL} className="avatar ring-primary ring-offset- w-12 mr-2 rounded-full" alt="" />
-          <a className="btn btn-outline uppercase ">{user?.displayName}</a>
+          {
+         user && isAdmin &&  <Link to="/dashboard/adminHome" > <a className="btn btn-outline uppercase text-white">{user?.displayName}</a> </Link>
+          }
+          {
+         user && !isAdmin &&  <Link to="/dashboard/userHome" > <a className="btn btn-outline uppercase text-white">{user?.displayName}</a> </Link>
+          }
         </div>
         : 
         <div></div>
