@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { FaTrashAlt, FaUser } from "react-icons/fa";
 import Swal from "sweetalert2";
+import SectionTitle from "../../../components/sectionTitle/SectionTitle";
 
 const AllUsers = () => {
     const axiosSecure = useAxiosSecure();
@@ -66,6 +67,8 @@ const AllUsers = () => {
 
     return (
         <div>
+        <SectionTitle heading="MANAGE ALL USERS" subHeading="---How many??---" ></SectionTitle>
+        <div className=" lg:w-[80%] mx-auto overflow-x-auto  p-5 shadow-[30px_35px_60px_-15px_rgba(0,0,0,0.3)] bg-[#FFFFFFFF]">
             <div className='flex justify-evenly my-4' >
             <h2 className='text-3xl' >All users</h2>
             <h2 className='text-3xl'>Total Users : {users.length}</h2>
@@ -73,7 +76,7 @@ const AllUsers = () => {
             <div className="overflow-x-auto w-full">
   <table className="table table-zebra">
     {/* head */}
-    <thead>
+    <thead className='bg-[#D1A054] text-white uppercase font-light'>
       <tr>
         <th></th>
         <th>Name</th>
@@ -82,9 +85,9 @@ const AllUsers = () => {
         <th> Action</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody className="text-[#737373]">
       {
-        users.map((user, index) => <tr key={user._id}>
+        users.map((user, index) => <tr key={user._id} >
             <th>{index + 1}</th>
             <td> {user.name} </td>
             <td> {user.email} </td>
@@ -107,6 +110,7 @@ const AllUsers = () => {
     </tbody>
   </table>
 </div>
+        </div>
         </div>
     );
 };

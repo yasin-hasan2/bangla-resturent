@@ -56,26 +56,26 @@ const AddItems = () => {
         <div>
         <SectionTitle heading="add an item" subHeading="what's new?" ></SectionTitle>
         
-        <div>
+        <div className="bg-[#E8E8E8] p-10">
         <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="form-control w-full my-6">
+        <div className="form-control w-full my-6 text-black">
         <label className="label">
-          <span className="label-text">Recipe name?</span>
+          <span className="label-text text-black">Recipe name?</span>
         </label>
         <input type="text" 
         placeholder="Recipe name" 
         {...register('name', {required: true})}
-        className="input input-bordered w-full " />
+        className="input input-bordered w-full bg-white " />
       </div>
 
       <div className="flex gap-6 ">
      {/** category */}
      <div className="w-full">
      <label className="label">
-     <span className="label-text">Category</span>
+     <span className="label-text text-black">Category</span>
    </label>
    <select defaultValue="default" {...register('category' , {required: true})}
-      className="  select select-bordered w-full ">
+      className="  select select-bordered w-full bg-white">
           <option disabled value="default"> Select a category  ?</option>
           <option value="salad">Salad</option>
           <option value="pizza">Pizza</option>
@@ -88,12 +88,12 @@ const AddItems = () => {
 
      <div className="form-control w-full  ">
         <label className="label">
-          <span className="label-text">Price</span>
+          <span className="label-text text-black">Price</span>
         </label>
         <input type="text" 
         placeholder="Price" 
         {...register('price' , {required: true})}
-        className="input input-bordered w-full " />
+        className="input input-bordered w-full bg-white" />
       </div>
 
       </div>
@@ -102,24 +102,23 @@ const AddItems = () => {
 
       <div className="form-control w-full">
   <label className="label">
-    <span className="label-text">Recipe Details</span>
+    <span className="label-text text-black">Recipe Details</span>
   </label>
-  <textarea {...register('recipe')} className="textarea textarea-bordered h-24" placeholder="Bio"></textarea>
+  <textarea {...register('recipe')} className="textarea textarea-bordered h-24 bg-white" placeholder="Bio"></textarea>
 </div>
 
 
 
 <div className=" form-control w-full my-6">
-<input {...register('image' , {required: true})} type="file" className="file-input w-full max-w-xs" />
+<input {...register('image' , {required: true})} type="file" className="file-input w-full max-w-xs bg-white" />
 </div>
 
 
 
-<button className="btn">
+<button className="btn bg-gradient-to-r from-[#835D23] to-[#B58130] ">
  Add Item
  <FaUtensils className="ml-4"></FaUtensils>
  </button>
-
     </form>
         </div>
         </div>

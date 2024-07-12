@@ -59,11 +59,11 @@ const ManageItems = () => {
     return (
         <div>
             <SectionTitle heading="manage all items" subHeading="harry Up" ></SectionTitle>
-            <div>
+            <div className=" lg:w-[80%] mx-auto overflow-x-auto  p-5 shadow-[30px_35px_60px_-15px_rgba(0,0,0,0.3)] bg-[#FFFFFFFF]">
             <div className="overflow-x-auto w-full">
   <table className="table">
     {/* head */}
-    <thead>
+    <thead className='bg-[#D1A054] text-white uppercase font-light'>
       <tr>
         <th>
           <label>
@@ -77,7 +77,7 @@ const ManageItems = () => {
         <th>Delete</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody className="text-[#737373]">
       {
         menu.map((item, index)=> <tr key={item._id} >
             <td>
@@ -95,7 +95,6 @@ const ManageItems = () => {
             <td>
               {item.name}
               <br/>
-              <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
             </td>
             <td>$ {item.price}</td>
             <td>

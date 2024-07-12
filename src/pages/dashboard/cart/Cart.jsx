@@ -50,7 +50,7 @@ const Cart = () => {
            >
            </SectionTitle>
         
-           <div className=" w-[80%] mx-auto overflow-x-auto  p-5 shadow-[30px_35px_60px_-15px_rgba(0,0,0,0.3)] bg-[#FFFFFFFF]">
+           <div className=" lg:w-[80%] mx-auto overflow-x-auto  p-5 shadow-[30px_35px_60px_-15px_rgba(0,0,0,0.3)] bg-[#FFFFFFFF]">
            <div className='flex justify-evenly mb-8'>
            <h2 className='text-2xl font-semibold'>Items: {cart.length} </h2>
            <h2 className='text-2xl font-semibold'>Total Price: {totalPrice} </h2>
@@ -65,18 +65,18 @@ const Cart = () => {
            </div>
   <table className="table w-full">
     {/* head */}
-    <thead>
+    <thead className='bg-[#D1A054] text-white uppercase font-light'>
       <tr>
         <th>
           #
         </th>
-        <th>Image</th>
-        <th>Name</th>
+        <th>Item Image</th>
+        <th>Item Name</th>
         <th> Price</th>
         <th>Action</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody className='text-[#737373]'>
     {
         cart.map((item, index) => <tr key={item._id}>
             <th>
