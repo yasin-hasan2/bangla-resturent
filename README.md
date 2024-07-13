@@ -1,8 +1,25 @@
-# React + Vite
+# Restaurant Niche Product Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The live site link: 
 
-Currently, two official plugins are available:
+A niche website is a website that caters to a small segment of a large market by focusing on a common, specific interest. My website, is a Restaurant Website, is a niche website.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What I do in this project
+<b><blockquote> Programming Technology</blockquote></b>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Material UI</li>
+<li>Node JS</li>
+<li>Node Express</li>
+<li>React Router</li>
+<br/>
+<b><blockquote> Some Features</blockquote></b>
+<li>React Hook Form</li>
+<li>Dynamic Route</li>
+<li>Private Route</li>
+<li>Admin Route</li>
+<li>Dashboard</li>
+<li>Firebase Authentication</li>
+<li>Vercel Server Hosting</li>
+<li>Context API</li>

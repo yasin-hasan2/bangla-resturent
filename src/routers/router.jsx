@@ -21,11 +21,13 @@ import PaymentHistory from "../pages/dashboard/paymentHistory/PaymentHistory";
 import UserHome from "../pages/dashboard/userHome/UserHome";
 import AdminHome from "../pages/dashboard/adminHome/AdminHome";
 import ContactUs from "../pages/contactUs/ContactUs";
+import Error from "../error/Error";
 
   export const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <Error></Error>,
       children:[
         {
             path:"/",

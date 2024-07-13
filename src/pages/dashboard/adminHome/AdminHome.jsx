@@ -65,7 +65,7 @@ console.log(chartData)
     })
 
     return (
-        <div>
+        <div className='bg-[#F3F3F3]'>
             <h2 className="text-4xl font-semibold mb-4 ml-4">
             <span>Hi, welcome Back!</span>
             <br />
@@ -75,43 +75,43 @@ console.log(chartData)
           }
             </h3>
             </h2>
-            <div className=" shadow  flex flex-col justify-center items-center gap-4 ">
+            <div className="   flex flex-col lg:flex-row justify-center items-center gap-4 ">
             
-            <div className="stat border w-72">
+            
+            <div className=" rounded-lg stat bg-gradient-to-r from-[#BB34F5] to-[#FCDBFF] text-[#FFFFFF] ">
             <div className="stat-figure text-secondary">
-              <FaDollarSign className="inline-block h-8 w-8 stroke-current"></FaDollarSign>
+              <FaDollarSign className="inline-block h-8 w-8 stroke-current text-white"></FaDollarSign>
             </div>
-            <div className="stat-title">Revenue</div>
+            <div className="stat-title text-white">Revenue</div>
             <div className="stat-value">${stats?.revenue}</div>
-            <div className="stat-desc">Jan 1st - Feb 1st</div>
+            <div className="stat-desc text-white">Jan 1st - Feb 1st</div>
           </div>
-            <div className='border'>
         
-          <div className="stat">
+          <div className=" rounded-lg stat bg-gradient-to-r from-[#D3A256] to-[#FDE8C0]">
             <div className="stat-figure text-secondary">
-              <FaUser className="inline-block h-8 w-8 stroke-current" ></FaUser>
+              <FaUser className="inline-block h-8 w-8 stroke-current text-white" ></FaUser>
             </div>
-            <div className="stat-title">New Users</div>
-            <div className="stat-value"> {stats?.users} </div>
-            <div className="stat-desc">↗︎ 400 (22%)</div>
+            <div className="stat-title text-white">New Users</div>
+            <div className="stat-value text-white"> {stats?.users} </div>
+            <div className="stat-desc text-white">↗︎ 400 (22%)</div>
           </div>
           
-          <div className="stat">
+          <div className=" rounded-lg stat bg-gradient-to-r from-[#FE4880] to-[#FECDE9]">
             <div className="stat-figure text-secondary">
-              <FaBook className="inline-block h-8 w-8 stroke-current" ></FaBook>
+              <FaBook className="inline-block h-8 w-8 stroke-current text-white" ></FaBook>
             </div>
-            <div className="stat-title">Menu Items</div>
-            <div className="stat-value"> {stats?.menuItems} </div>
-            <div className="stat-desc">↗︎ 400 (22%)</div>
+            <div className="stat-title text-white">Menu Items</div>
+            <div className="stat-value text-white"> {stats?.menuItems} </div>
+            <div className="stat-desc text-white">↗︎ 400 (22%)</div>
           </div>
         
-          <div className="stat">
+          <div className="rounded-lg stat bg-gradient-to-r from-[#6AAEFF] to-[#B6F7FF]">
             <div className="stat-figure text-secondary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                className="inline-block h-8 w-8 stroke-current">
+                className="inline-block h-8 w-8 stroke-current text-white">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -119,16 +119,16 @@ console.log(chartData)
                   d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
               </svg>
             </div>
-            <div className="stat-title">Orders</div>
-            <div className="stat-value"> {stats?.orders} </div>
-            <div className="stat-desc">↘︎ 90 (14%)</div>
+            <div className="stat-title text-white">Orders</div>
+            <div className="stat-value text-white"> {stats?.orders} </div>
+            <div className="stat-desc text-white">↘︎ 90 (14%)</div>
           </div>
-            </div>
+            
             </div>
 
 
-            <div className='flex'>
-            <div className="w-1/2">
+            <div className='flex items-center flex-col lg:flex-row border mt-10 bg-[#FFFFFF] pb-10'>
+            <div className="lg:w-1/2">
             <BarChart
       width={500}
       height={300}
@@ -157,12 +157,13 @@ console.log(chartData)
           {chartData.map((entry, index) => (
           <Cell key={`cell-${index}`} fill={colors[index % 6]} />
         ))}
-          
+        
       </Bar>
     </BarChart>
             </div>
             <div className="w-1/2">
             <PieChart width={400} height={400}>
+            <Legend></Legend>
           <Pie
             data={pieChartData}
             cx="50%"
@@ -177,7 +178,6 @@ console.log(chartData)
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
             ))}
           </Pie>
-          <Legend></Legend>
         </PieChart>
             </div>
             </div>
