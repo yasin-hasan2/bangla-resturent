@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
         </footer>
         <aside className='bg-base-200 text-gray-400 h-10 text-center font-light'>
-      <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+      <p>Copyright © 2024 - All right reserved by Yasin Al-Hasan</p>
     </aside>
         </div>
     );
