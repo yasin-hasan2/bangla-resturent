@@ -29,7 +29,8 @@ const Footer = () => {
         </div>
         </footer>
         <aside className='bg-base-200 text-gray-400 h-10 text-center font-light'>
-      <p>Copyright © 2024 - All right reserved by Yasin Al-Hasan</p>
+
+      <p>Copyright © 2024 - All right reserved by <span className='text-[#D99904] font-normal '>@YasinAl-Hasan</span> </p>
     </aside>
         </div>
     );
