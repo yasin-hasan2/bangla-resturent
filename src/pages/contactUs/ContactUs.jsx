@@ -5,10 +5,18 @@ import SectionTitle from '../../components/sectionTitle/SectionTitle';
 import Cover from '../shared/cover/Cover';
 import { FaLocationDot } from 'react-icons/fa6';
 import From from './From';
+import { Helmet } from 'react-helmet-async';
 
 const ContactUs = () => {
     return (
         <div>
+        <div>
+          <Helmet>
+          <title>
+          Bangla-restaurant || Contact Us
+          </title>
+          </Helmet>
+          </div>
         <Cover ideas={"Would you like to try a dish?"} img={contactCover} title={"Contact Us"} ></Cover>
         <SectionTitle
            subHeading={"---Visit Us---"} heading={"OUR LOCATION"}

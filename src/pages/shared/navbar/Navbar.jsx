@@ -38,7 +38,7 @@ const Navbar = () => {
       user && !isAdmin && <li> <Link to="/dashboard/userHome" className='hover:text-[#EEFF25] '  >Dashboard </Link> </li>
     }
     <li> <Link to="/menu" className='hover:text-[#EEFF25] '  >Our Menu</Link> </li>
-    <li> <Link to="/order/salad" className='hover:text-[#EEFF25] '  >Our Shop</Link> </li>
+    <li> <Link to="/order/salad" className='hover:text-[#EEFF25] '  >Food Order</Link> </li>
     <li> 
     {
       user ? <Link to="/dashboard/cart" className='hover:text-[#EEFF25] '  > 

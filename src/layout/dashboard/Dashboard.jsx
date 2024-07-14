@@ -9,6 +9,7 @@ import logo from '../../../public/logo.png'
 import homeIcon from '../../../public/icons/admin-avatar.svg'
 import { IoMdExit } from 'react-icons/io';
 import { AuthContext } from '../../providers/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 const Dashboard = () => {
   const {user, logOut} = useContext(AuthContext);
@@ -26,6 +27,14 @@ const Dashboard = () => {
   }
 
     return (
+      <div>
+          <div>
+          <Helmet>
+          <title>
+          Bangla-restaurant || User Dashboard
+          </title>
+          </Helmet>
+          </div>
       <div className='flex'>
       <div
       className={
@@ -184,6 +193,7 @@ const Dashboard = () => {
           <div className='flex-1 p-8 bg-[#F3F3F3]'>
             <Outlet></Outlet>
           </div>
+      </div>
       </div>
     );
 };

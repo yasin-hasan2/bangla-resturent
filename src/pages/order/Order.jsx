@@ -30,7 +30,7 @@ const Order = () => {
         <div>
         <Helmet>
         <title>
-        Bangla-restaurant || Order Food
+        Bangla-restaurant || Food Order 
         </title>
         </Helmet>
         </div>
